@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TestArray
 {
-    public class MartixArr
+    public class MartixArr : IMatrix
     {
         private int[,] _arr;
         int _rowLength => _arr.GetLength(0);
@@ -18,7 +18,7 @@ namespace TestArray
         }
 
         public void ArrayFillRandom(bool fullRefill = false) {
-
+            
             var rand = new Random();
            
             for (int i = 0; i < _rowLength; i++)
@@ -26,7 +26,7 @@ namespace TestArray
                 for (int j = 0; j < _colLength; j++)
                 {
                     if (fullRefill || _arr[i, j] == -1)
-                        _arr[i, j] = rand.Next(0, 4);
+                        _arr[i, j] = rand.Next(0, _maxUnicValues);
                 }
             }
         }

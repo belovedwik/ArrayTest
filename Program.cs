@@ -7,7 +7,7 @@ namespace TestArray
         public static void Main(string[] args)
         {
 
-            var myArr = new MartixArr(9, 4);
+            IMatrix myArr = new MatrixList(9, 4);
             myArr.ArrayFillRandom(true);
 
             myArr.PrintArray();
