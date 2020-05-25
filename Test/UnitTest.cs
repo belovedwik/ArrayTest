@@ -28,12 +28,12 @@ namespace TestArray.Test
         }
 
         [TestMethod]
-        public void TestMatrix_Fail()
+        public void TestMatrix_NotEqual()
         {
            
             matrix = new MartixArr(9, 4);
             var matrixA = new MartixArr(9, 4);
-            Assert.AreEqual(matrix, matrixA);
+            Assert.AreNotEqual(matrix, matrixA);
         }
     }
 }
